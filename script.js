@@ -95,6 +95,37 @@ async function enter() {
       )
     );
   }
+  const h3Elements = document.querySelectorAll("h3");
+  const pElement = document.querySelector("#description");
+
+  h3Elements.forEach((h3) => {
+    h3.addEventListener("mouseover", (event) => {
+      h3.style.color = color(255, 77, 77);
+      for (let of of orbits) {
+        if (of.getKeyword()[0].slice(0, -4) != h3.id) {
+          of.invisible();
+          of.setGainer(0);
+        } else {
+          pElement.textContent = of.getDescription();
+          of.setSelected(true);
+          of.playSoundSelected(0);
+          of.setGainer(0);
+        }
+      }
+    });
+  });
+
+  h3Elements.forEach((h3) => {
+    h3.addEventListener("mouseout", (event) => {
+      h3.style.color = color(255, 255, 255, 100);
+      for (let of of orbits) {
+        of.visible();
+        of.setGainer(gainDefault);
+        of.setSelected(false);
+      }
+      pElement.textContent = "";
+    });
+  });
 }
 
 async function decodeAudio(url) {
@@ -147,38 +178,6 @@ function draw() {
     }
   }
 }
-
-const h3Elements = document.querySelectorAll("h3");
-const pElement = document.querySelector("#description");
-
-h3Elements.forEach((h3) => {
-  h3.addEventListener("mouseover", (event) => {
-    h3.style.color = color(255, 77, 77);
-    for (let of of orbits) {
-      if (of.getKeyword()[0].slice(0, -4) != h3.id) {
-        of.invisible();
-        of.setGainer(0);
-      } else {
-        pElement.textContent = of.getDescription();
-        of.setSelected(true);
-        of.playSoundSelected(0);
-        of.setGainer(0);
-      }
-    }
-  });
-});
-
-h3Elements.forEach((h3) => {
-  h3.addEventListener("mouseout", (event) => {
-    h3.style.color = color(255, 255, 255, 100);
-    for (let of of orbits) {
-      of.visible();
-      of.setGainer(gainDefault);
-      of.setSelected(false);
-    }
-    pElement.textContent = "";
-  });
-});
 
 class Orbit {
   constructor(orbitAngle, keyword, keywordAudioBuffer, description) {
