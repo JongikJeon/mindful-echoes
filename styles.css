@@ -1,0 +1,143 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(12, 12, 12);
+  justify-content: space-between;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+.content {
+  display: flex;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 2s ease-out;
+}
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(12, 12, 12);
+  transition: 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  opacity: 1;
+  transition: opacity 2s ease-out;
+}
+.enter {
+  box-sizing: border-box;
+  appearance: none;
+  background-color: transparent;
+  border: 1px solid rgb(217, 217, 217);
+  border-radius: 0.6em;
+  color: rgb(217, 217, 217);
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-self: center;
+  line-height: 1;
+  padding: 1.2em 2.8em;
+  text-align: center;
+
+  &:hover,
+  &:focus {
+    color: #000000;
+    outline: 0;
+  }
+}
+.hover {
+  transition:
+    box-shadow 200ms ease-in-out,
+    color 200ms ease-in-out;
+  &:hover {
+    box-shadow: 0 0 400px 400px rgb(217, 217, 217) inset;
+  }
+}
+.headphones {
+  display: flex;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  color: rgba(217, 217, 217);
+  font-size: 1rem;
+  margin-top: 1%;
+}
+.loading-entering {
+  display: none;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  color: rgba(217, 217, 217);
+  font-size: 1.4rem;
+  margin-bottom: 2%;
+}
+.loading-bar {
+  display: none;
+  width: 30%;
+  height: 0.5vh;
+  background: rgb(217, 217, 217);
+  justify-content: flex-start;
+}
+.loading-bar-progress {
+  width: 0%;
+  height: 0.5vh;
+  background: rgb(255, 77, 77);
+  transition: width 0.1s linear;
+}
+.area1 {
+  background-color: rgb(12, 12, 12);
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(217, 217, 217);
+}
+.area1-text {
+  display: flex;
+  padding-left: 33%;
+}
+p {
+  font-family: "Wix Madefor Text", serif;
+  font-weight: 100;
+  color: rgb(217, 217, 217);
+  font-size: 1.2rem;
+  line-height: 180%;
+  white-space: pre-line;
+}
+#area2 {
+  flex: 2;
+  display: flex;
+}
+.area3 {
+  background-color: rgb(12, 12, 12);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+.area3-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  padding-right: 33%;
+  pointer-events: none;
+}
+h3 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  text-align: right;
+  color: rgba(255, 255, 255, 0.392);
+  font-size: 1.4rem;
+  margin-top: 6%;
+  margin-bottom: 6%;
+  cursor: default;
+}
