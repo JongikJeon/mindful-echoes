@@ -7,7 +7,7 @@ let orbitLong;
 let orbitShort;
 let orbits = [];
 let orbitAngleUnit = 15;
-let gainDefault = 3;
+let gainDefault = 2;
 let fileURLs = [];
 let progress = 0;
 
