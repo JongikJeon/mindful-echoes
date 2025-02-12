@@ -196,7 +196,7 @@ class Orbit {
     this.gainer = audioContext.createGain();
     this.gainer.gain.value = gainDefault;
     this.gainerS = audioContext.createGain();
-    this.gainerS.gain.value = gainDefault + 1;
+    this.gainerS.gain.value = gainDefault + 0.5;
     this.setPanner();
 
     setTimeout(
