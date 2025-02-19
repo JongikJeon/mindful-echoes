@@ -64,8 +64,8 @@ body {
 }
 .headphones {
   display: flex;
-  font-family: "Raleway", sans-serif;
-  font-weight: 300;
+  font-family: "Wix Madefor Text", serif;
+  font-weight: 100;
   color: rgba(217, 217, 217);
   font-size: 1rem;
   margin-top: 1%;
