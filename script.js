@@ -52,7 +52,7 @@ let descriptions = {
 // audio variables
 let audioContext;
 const audioPath =
-  "https://raw.githubusercontent.com/JongikJeon/mindful_echoes/main/audio/";
+  "https://raw.githubusercontent.com/JongikJeon/mindful-echoes/main/audio/";
 
 // loading audio files
 async function enter() {
